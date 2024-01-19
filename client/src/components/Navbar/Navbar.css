@@ -1,0 +1,79 @@
+.home_nav_container {
+  padding: 10px;
+  background: #0c0c0c;
+  display: flex;
+  position: sticky;
+}
+
+.menu {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.menu li .link,
+.nav_login_container .link {
+  margin: 0 1.5rem;
+  color: white;
+  text-decoration: none;
+  transition: ease-in-out 0.3s;
+}
+
+.menu li .link:hover,
+.nav_login_container .link:hover {
+  color: gray;
+}
+
+.nav_login_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* @keyframes moveCarForward { */
+  /* 0% { */
+    /* transform: translateX(0) rotate(0); */
+  /* } */
+  /* 50% { */
+    /* transform: translateX(50vw) rotate(90deg); Adjust distance and rotation as needed */
+  /* } */
+  /* 100% { */
+    /* transform: translateX(100vw) rotate(180deg); Adjust distance and rotation as needed */
+  /* } */
+/* } */
+
+/* @keyframes moveCar {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(500%);
+  }
+} */
+
+.logo svg {
+  animation: moveCar 6s linear infinite;
+}
+
+.cart-icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px; /* Adjust this value to position the count properly */
+  right: -8px; /* Adjust this value to position the count properly */
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+
+
+

@@ -1,0 +1,48 @@
+
+.cartListContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background: #0c0c0c;
+    border-left: 2px solid white;
+    display: grid;
+    grid-template-rows: 45px 1fr 45px;
+    z-index: 5;
+    
+}
+.cartListContainer .cartButtonContainer{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+}
+.cartListContainer .cartButtonContainer :nth-child(2){
+    background: green;
+}
+
+.cartListContainer .cartButtonContainer :nth-child(1){
+    background: gold;
+}
+
+.cartContainerHide{
+    display: none;
+}
+
+.card_list_container{
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 3px;
+margin: 5px;
+}
+
+.quantity_button{
+    height: 30px;
+    width: 30px;
+}
+
+.list_container{
+    overflow: auto;
+}
+
+.green{color: green;}

@@ -1,0 +1,102 @@
+openapi: 3.0.0
+info:
+  title: Your API Documentation
+  version: 1.0.0
+  description: API documentation for your Node.js application
+
+servers:
+  - url: http://localhost:3000
+    description: Development server
+
+paths:
+  /auth/register:
+    post:
+      summary: Register a new user
+      description: Endpoint to register a new user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: User registered successfully
+
+  /products:
+    get:
+      summary: Get all products
+      description: Retrieve a list of all products
+      responses:
+        '200':
+          description: A list of products
+
+    # Add other product routes and operations in a similar manner
+
+  /carts/{userId}:
+    get:
+      summary: Get user's cart
+      description: Retrieve the cart of a user by their ID
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          description: ID of the user
+          schema:
+            type: string
+      responses:
+        '200':
+          description: User's cart
+
+    # Add other cart routes and operations
+
+  /checkout/create-order:
+    post:
+      summary: Create an order
+      description: Endpoint to create a new order
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+                products:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      productId:
+                        type: string
+                      quantity:
+                        type: number
+      responses:
+        '200':
+          description: Order created successfully
+
+  /checkout/process-payment:
+    post:
+      summary: Process payment
+      description: Endpoint to process payment using Stripe
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                orderId:
+                  type: string
+                paymentMethodId:
+                  type: string
+      responses:
+        '200':
+          description: Payment processed successfully
+
+# Add other checkout routes and operations
